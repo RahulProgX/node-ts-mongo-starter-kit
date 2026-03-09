@@ -1,16 +1,17 @@
-const ENVIRONMENTS = {
+export const ENVIRONMENTS = {
   DEVELOPMENT: "development",
   STAGING: "staging",
   PRODUCTION: "production",
-};
+} as const;
 
-const APP_LOG_MESSAGE = {
+export type TEnvironment = (typeof ENVIRONMENTS)[keyof typeof ENVIRONMENTS];
+
+export const APP_LOG_MESSAGE = {
   APP_STARTED: "🚀 APPLICATION STARTED",
   APP_ERROR: "❌ APPLICATION ERROR",
   DB_CONNECTED: `✅ DATABASE CONNECTED`,
   DB_CONNECTION_ERROR: "❌ DB CONNECTION ERROR",
   MISSING_ENV_VARIABLE: "⚠️ MISSING ENVIRONMENT VARIABLE",
   VALIDATION_ERROR: "❌ VALIDATION ERROR",
-};
+} as const;
 
-export { ENVIRONMENTS, APP_LOG_MESSAGE };

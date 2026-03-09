@@ -1,9 +1,10 @@
-const httpConfig = () => ({
+export const HTTPSTATUS = {
   // Success responses
   OK: 200,
   CREATED: 201,
   ACCEPTED: 202,
   NO_CONTENT: 204,
+  
   // Client error responses
   BAD_REQUEST: 400,
   UNAUTHORIZED: 401,
@@ -20,8 +21,7 @@ const httpConfig = () => ({
   BAD_GATEWAY: 502,
   SERVICE_UNAVAILABLE: 503,
   GATEWAY_TIMEOUT: 504,
-});
+} as const;
 
-export const HTTPSTATUS = httpConfig();
 
 export type THttpStatusCode = (typeof HTTPSTATUS)[keyof typeof HTTPSTATUS];

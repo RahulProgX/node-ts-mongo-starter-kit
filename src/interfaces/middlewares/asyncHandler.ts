@@ -1,11 +1,10 @@
-import type { NextFunction, Request, Response } from "express";
+import type { NextFunction, Request, RequestHandler, Response } from "express";
 
-type    TAsynController = (req:Request, res:Response, next:NextFunction)=> Promise<any>;
+type  TAsyncController = (req:Request, res:Response, next:NextFunction)=> Promise<unknown>;
 
-export const asyncHandler= (controller:TAsynController): TAsynController=>async(req,res,next)=>{
-    try {
-        await controller(req,res,next)
-    } catch (error) {
-        next(error)
-    }
-}
+
+export const asyncHandler =
+  (controller: TAsyncController): RequestHandler =>
+  (req, res, next) => {
+    Promise.resolve(controller(req, res, next)).catch(next);
+  };

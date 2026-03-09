@@ -3,14 +3,14 @@ import { APP_LOG_MESSAGE } from "../../common/constants/index.js";
 import { errorResponse, type TError } from "../../common/utils/response.js";
 import { AppError } from "../../common/errors/AppError.js";
 import {ZodError } from "zod"
-import { HTTPSTATUS } from "../../config/http.config.js";
+import { HTTPSTATUS, type THttpStatusCode } from "../../config/http.config.js";
 import { ErrorCode } from "../../common/enums/errorCode.enum.js";
 
 
 export const globalErrorHandler:ErrorRequestHandler = (err:Error, req:Request, res:Response, _next:NextFunction)=>{
-    if (err) console.error(APP_LOG_MESSAGE.APP_ERROR, { meta: { error: err } });
+    console.error(APP_LOG_MESSAGE.APP_ERROR, { meta: { error: err } });
 
-  let statusCode = HTTPSTATUS.INTERNAL_SERVER_ERROR;
+  let statusCode :THttpStatusCode = HTTPSTATUS.INTERNAL_SERVER_ERROR;
   let message = "Internal Server Error";
   let errors: TError[] = [];
   let errorCode : ErrorCode | undefined = ErrorCode.INTERNAL_SERVER_ERROR;
@@ -29,9 +29,11 @@ export const globalErrorHandler:ErrorRequestHandler = (err:Error, req:Request, r
       field: e.path.join("."),
       message: e.message,
     }));
-  } else {
-    errors.push({ message: err.message });
+  } else if (err instanceof Error) {
+    // Unknown / unhandled error — don't leak internals in production
+    errors = [{ message: err.message }];
   }
+
 
   res.status(statusCode).json(errorResponse(message,errorCode, errors, req));
 }
