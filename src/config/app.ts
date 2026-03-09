@@ -20,7 +20,7 @@ const createApp = (): Express => {
   app.use(express.urlencoded({ extended: true }));
 
   // Routes
-  app.get("/", (req: Request, res: Response) => {
+  app.get("/", (_req: Request, res: Response) => {
     res.status(200).json({
       message: "OK",
     });

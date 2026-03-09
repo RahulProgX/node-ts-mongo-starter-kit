@@ -5,18 +5,17 @@ import envConfig, {
 } from "./config/env.config.js";
 import connectDatabase from "./infrastructure/database/connectDatabase.js";
 
-const bootstrap = async () => {
+const bootstrap = async (): Promise<void> => {
   try {
     validateEnvironmentVariables();
     connectDatabase();
 
     const app = createApp();
-    const port = envConfig.PORT;
 
-    app.listen(port, () => {
+    app.listen(envConfig.PORT, () => {
       console.info(APP_LOG_MESSAGE.APP_STARTED, {
         meta: {
-          PORT: port,
+          PORT: envConfig.PORT,
         },
       });
     });
