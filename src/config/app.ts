@@ -2,7 +2,7 @@ import express from "express";
 import type { Express, Request, Response } from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import env from "./env.config.js";
+import envConfig from "./env.config.js";
 
 const createApp = (): Express => {
   const app = express();
@@ -10,7 +10,7 @@ const createApp = (): Express => {
   // Middleware
   app.use(
     cors({
-      origin: env.APP_ORIGIN,
+      origin: envConfig.APP_ORIGIN,
       methods: ["GET", "POST"],
       credentials: true,
     }),

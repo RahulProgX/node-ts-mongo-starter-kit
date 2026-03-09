@@ -1,14 +1,17 @@
 import { createApp } from "./config/app.js";
 import { APP_LOG_MESSAGE } from "./common/constants/index.js";
-import env, { validateEnvironmentVariables } from "./config/env.config.js";
+import envConfig, {
+  validateEnvironmentVariables,
+} from "./config/env.config.js";
+import connectDatabase from "./infrastructure/database/connectDatabase.js";
 
 const bootstrap = async () => {
   try {
     validateEnvironmentVariables();
-    // connectDB();
+    connectDatabase();
 
     const app = createApp();
-    const port = env.PORT;
+    const port = envConfig.PORT;
 
     app.listen(port, () => {
       console.info(APP_LOG_MESSAGE.APP_STARTED, {
