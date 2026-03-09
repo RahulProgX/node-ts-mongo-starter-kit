@@ -1,8 +1,12 @@
 import express from "express";
-import type { Express, Request, Response } from "express";
+import type { Express, NextFunction, Request, Response } from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import envConfig from "./env.config.js";
+import { globalErrorHandler } from "../interfaces/middlewares/globalErrorHandler.js";
+import { HTTPSTATUS } from "./http.config.js";
+import { asyncHandler } from "../interfaces/middlewares/asyncHandler.js";
+import { AppError } from "../common/errors/AppError.js";
 
 const createApp = (): Express => {
   const app = express();
@@ -20,18 +24,20 @@ const createApp = (): Express => {
   app.use(express.urlencoded({ extended: true }));
 
   // Routes
-  app.get("/", (_req: Request, res: Response) => {
-    res.status(200).json({
+  app.get("/",asyncHandler( async (_req: Request, res: Response, next:NextFunction) => {
+    throw new AppError("Errr occured")
+    res.status(HTTPSTATUS.OK).json({
       message: "OK",
-    });
-  });
+    })
+  }));
+
   // app.use("/api/v1", router);
 
   /// Catch-all for unmatched routes
   // app.use(notFoundHandler);
 
   // Global error handler
-  // app.use(globalErrorHandler);
+  app.use(globalErrorHandler);
 
   return app;
 };
