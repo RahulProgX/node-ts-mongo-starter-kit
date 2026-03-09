@@ -9,7 +9,7 @@ const envConfig = {
   MONGO_URI: process.env.MONGO_URI,
   APP_ORIGIN: process.env.APP_ORIGIN,
   JWT_SECRET: process.env.JWT_SECRET,
-  saltWorkFactor: 10,
+  SALT_WORK_FACTOR: 10,
 } as const;
 
 export const validateEnvironmentVariables = (): void => {
