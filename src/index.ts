@@ -4,6 +4,7 @@ import envConfig, {
   validateEnvironmentVariables,
 } from "./config/env.config.js";
 import connectDatabase from "./infrastructure/database/connectDatabase.js";
+import logger from "./infrastructure/logger/index.js";
 
 const bootstrap = async (): Promise<void> => {
   try {
@@ -13,7 +14,7 @@ const bootstrap = async (): Promise<void> => {
     const app = createApp();
 
     const server = app.listen(envConfig.PORT, () => {
-      console.info(APP_LOG_MESSAGE.APP_STARTED, {
+      logger.info(APP_LOG_MESSAGE.APP_STARTED, {
         meta: {
           PORT: envConfig.PORT, ENV: envConfig.NODE_ENV
         },
@@ -21,9 +22,9 @@ const bootstrap = async (): Promise<void> => {
     });
     //  Graceful shutdown
     const shutdown = (signal: string) => {
-      console.info(`\n${signal} received — shutting down gracefully`);
+      logger.info(`\n${signal} received — shutting down gracefully`);
       server.close(() => {
-        console.info("HTTP server closed");
+        logger.info("HTTP server closed");
         process.exit(0);
       });
     };
@@ -31,7 +32,7 @@ const bootstrap = async (): Promise<void> => {
     process.on("SIGTERM", () => shutdown("SIGTERM"));
     process.on("SIGINT", () => shutdown("SIGINT"));
   } catch (error) {
-    console.error(APP_LOG_MESSAGE.APP_ERROR, { meta: { error } });
+    logger.error(APP_LOG_MESSAGE.APP_ERROR, { meta: { error } });
     process.exit(1);
   }
 };

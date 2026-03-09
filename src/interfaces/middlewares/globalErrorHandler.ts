@@ -5,10 +5,11 @@ import { AppError } from "../../common/errors/AppError.js";
 import {ZodError } from "zod"
 import { HTTPSTATUS, type THttpStatusCode } from "../../config/http.config.js";
 import { ErrorCode } from "../../common/enums/errorCode.enum.js";
+import logger from "../../infrastructure/logger/index.js";
 
 
 export const globalErrorHandler:ErrorRequestHandler = (err:Error, req:Request, res:Response, _next:NextFunction)=>{
-    console.error(APP_LOG_MESSAGE.APP_ERROR, { meta: { error: err } });
+  logger.error(APP_LOG_MESSAGE.APP_ERROR, { meta: { error: err } });
 
   let statusCode :THttpStatusCode = HTTPSTATUS.INTERNAL_SERVER_ERROR;
   let message = "Internal Server Error";
