@@ -1,16 +1,16 @@
+import { APP_LOG_MESSAGE } from "@common/constants/index.js";
+import { ErrorCode } from "@common/enums/errorCode.enum.js";
+import { AppError } from "@common/errors/AppError.js";
+import { errorResponse, type TError } from "@common/utils/response.js";
+import { HTTPSTATUS, type THttpStatusCode } from "@config/http.config.js";
+import logger from "@infrastructure/logger/index.js";
 import type {
   ErrorRequestHandler,
   NextFunction,
   Request,
   Response,
 } from "express";
-import { APP_LOG_MESSAGE } from "../../common/constants/index.js";
-import { errorResponse, type TError } from "../../common/utils/response.js";
-import { AppError } from "../../common/errors/AppError.js";
 import { ZodError } from "zod";
-import { HTTPSTATUS, type THttpStatusCode } from "../../config/http.config.js";
-import { ErrorCode } from "../../common/enums/errorCode.enum.js";
-import logger from "../../infrastructure/logger/index.js";
 
 export const globalErrorHandler: ErrorRequestHandler = (
   err: Error,

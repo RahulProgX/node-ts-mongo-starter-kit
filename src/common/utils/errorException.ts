@@ -1,6 +1,6 @@
-import { ErrorCode } from "../enums/errorCode.enum.js";
-import { AppError } from "../errors/AppError.js";
-import { HTTPSTATUS, type THttpStatusCode } from "../../config/http.config.js";
+import { ErrorCode } from "@common/enums/errorCode.enum.js";
+import { AppError } from "@common/errors/AppError.js";
+import { HTTPSTATUS, type THttpStatusCode } from "@config/http.config.js";
 
 export class HttpException extends AppError {
   constructor(

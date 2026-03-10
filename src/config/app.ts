@@ -2,14 +2,14 @@ import express from "express";
 import type { Express, NextFunction, Request, Response } from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import envConfig from "./env.config.js";
 import helmet from "helmet";
-import { globalErrorHandler } from "../interfaces/middlewares/globalErrorHandler.js";
-import { HTTPSTATUS } from "./http.config.js";
-import { asyncHandler } from "../interfaces/middlewares/asyncHandler.js";
-import { AppError } from "../common/errors/AppError.js";
-import { notFoundHandler } from "../interfaces/middlewares/notFoundHandler.js";
+import envConfig from "./env.config.js";
 import globalRateLimiter from "./rateLimiter.config.js";
+import { asyncHandler } from "@interfaces/middlewares/asyncHandler.js";
+import { HTTPSTATUS } from "./http.config.js";
+import { AppError } from "@common/errors/AppError.js";
+import { notFoundHandler } from "@interfaces/middlewares/notFoundHandler.js";
+import { globalErrorHandler } from "@interfaces/middlewares/globalErrorHandler.js";
 
 const createApp = (): Express => {
   const app = express();

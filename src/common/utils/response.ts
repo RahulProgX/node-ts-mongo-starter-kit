@@ -1,5 +1,5 @@
 import type { Request } from "express";
-import type { ErrorCode } from "../enums/errorCode.enum.js";
+import type { ErrorCode } from "@common/enums/errorCode.enum.js";
 
 export type TError = { field?: string; message: string };
 

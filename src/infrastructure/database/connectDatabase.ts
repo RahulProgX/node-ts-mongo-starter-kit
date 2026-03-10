@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-import { APP_LOG_MESSAGE } from "../../common/constants/index.js";
-import envConfig from "../../config/env.config.js";
-import logger from "../logger/index.js";
+import { APP_LOG_MESSAGE } from "@common/constants/index.js";
+import envConfig from "@config/env.config.js";
+import logger from "@infrastructure/logger/index.js";
 
 const connect = async (): Promise<void> => {
   try {

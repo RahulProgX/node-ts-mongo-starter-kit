@@ -1,6 +1,6 @@
-import { HTTPSTATUS, type THttpStatusCode } from "../../config/http.config.js";
-import type { ErrorCode } from "../enums/errorCode.enum.js";
-import type { TError } from "../utils/response.js";
+import { HTTPSTATUS, type THttpStatusCode } from "@config/http.config.js";
+import type { ErrorCode } from "@common/enums/errorCode.enum.js";
+import type { TError } from "@common/utils/response.js";
 
 export class AppError extends Error {
   public statusCode: THttpStatusCode;

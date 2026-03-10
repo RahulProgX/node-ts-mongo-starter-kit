@@ -1,10 +1,8 @@
-import { createApp } from "./config/app.js";
-import { APP_LOG_MESSAGE } from "./common/constants/index.js";
-import envConfig, {
-  validateEnvironmentVariables,
-} from "./config/env.config.js";
-import connectDatabase from "./infrastructure/database/connectDatabase.js";
-import logger from "./infrastructure/logger/index.js";
+import { APP_LOG_MESSAGE } from "@common/constants/index.js";
+import { createApp } from "@config/app.js";
+import envConfig, { validateEnvironmentVariables } from "@config/env.config.js";
+import connectDatabase from "@infrastructure/database/connectDatabase.js";
+import logger from "@infrastructure/logger/index.js";
 
 const shutdown = (signal: string, serverClose: () => void): void => {
   logger.info(`${signal} received — shutting down gracefully`);

@@ -4,9 +4,9 @@ import util from "util";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import envConfig from "../../config/env.config.js";
-import { ENVIRONMENTS } from "../../common/constants/index.js";
+import envConfig from "@config/env.config.js";
 import MongoTransport from "./mongoTransport.js";
+import { ENVIRONMENTS } from "@common/constants/index.js";
 
 const { combine, timestamp, printf } = format;
 

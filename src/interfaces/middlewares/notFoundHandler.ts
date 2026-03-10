@@ -1,5 +1,5 @@
+import { NotFoundException } from "@common/utils/errorException.js";
 import type { NextFunction, Request, Response } from "express";
-import { NotFoundException } from "../../common/utils/errorException.js";
 
 /**
  * Catch-all for routes that didn't match any handler.

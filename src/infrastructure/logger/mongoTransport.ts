@@ -1,5 +1,5 @@
 import Transport from "winston-transport";
-import LogModel from "../database/models/log.modle.js";
+import LogModel from "@infrastructure/database/models/log.modle.js";
 
 interface TLogEntry {
   level: string;

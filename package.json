@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js",
     "dev": "tsx watch src/index.ts",
-    "build": "tsc && cp ./package.json ./dist",
+    "build": "tsc && tsc-alias  && cp ./package.json ./dist",
     "start": "node dist/index.js",
     "prepare": "husky install",
     "commit": "cz",
@@ -78,6 +77,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.3.2",
     "prettier": "^3.8.1",
+    "tsc-alias": "^1.8.16",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.57.0"

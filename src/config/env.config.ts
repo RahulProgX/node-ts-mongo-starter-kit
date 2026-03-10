@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import { APP_LOG_MESSAGE, ENVIRONMENTS } from "../common/constants/index.js";
+import { APP_LOG_MESSAGE, ENVIRONMENTS } from "@common/constants/index.js";
 
 dotenv.config();
 
