@@ -67,3 +67,74 @@
   "timestamp": "2026-03-10T01:56:47.180Z",
   "meta": {}
 }
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-10T04:05:06.908Z",
+  "meta": {
+    "host": "localhost"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-10T04:05:06.926Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "ERROR",
+  "message": "❌ APPLICATION ERROR",
+  "timestamp": "2026-03-10T04:05:40.238Z",
+  "meta": {
+    "error": {
+      "name": "NotFoundException",
+      "message": "Route '/' not found",
+      "stack": "NotFoundException: Route '/' not found\n    at notFoundHandler (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\src\\interfaces\\http\\middlewares\\notFoundHandler.middleware.ts:13:8)\n    at Layer.handleRequest (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\index.js:342:13)\n    at C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\index.js:297:9\n    at processParams (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\index.js:582:12)\n    at next (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\index.js:291:5)\n    at read (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\body-parser@2.2.2\\node_modules\\body-parser\\lib\\read.js:53:5)\n    at urlencodedParser (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\body-parser@2.2.2\\node_modules\\body-parser\\lib\\types\\urlencoded.js:57:5)\n    at Layer.handleRequest (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\index.js:342:13)"
+    }
+  }
+}
+{
+  "level": "INFO",
+  "message": "GET / 404 156 bytes — 4.752 ms",
+  "timestamp": "2026-03-10T04:05:40.243Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "ERROR",
+  "message": "❌ APPLICATION ERROR",
+  "timestamp": "2026-03-10T04:05:40.298Z",
+  "meta": {
+    "error": {
+      "name": "NotFoundException",
+      "message": "Route '/favicon.ico' not found",
+      "stack": "NotFoundException: Route '/favicon.ico' not found\n    at notFoundHandler (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\src\\interfaces\\http\\middlewares\\notFoundHandler.middleware.ts:13:8)\n    at Layer.handleRequest (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\index.js:342:13)\n    at C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\index.js:297:9\n    at processParams (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\index.js:582:12)\n    at next (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\index.js:291:5)\n    at read (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\body-parser@2.2.2\\node_modules\\body-parser\\lib\\read.js:53:5)\n    at urlencodedParser (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\body-parser@2.2.2\\node_modules\\body-parser\\lib\\types\\urlencoded.js:57:5)\n    at Layer.handleRequest (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (C:\\Users\\seisaku-02\\Desktop\\KintoneGuide\\coding\\node\\starter\\node_modules\\.pnpm\\router@2.2.0\\node_modules\\router\\index.js:342:13)"
+    }
+  }
+}
+{
+  "level": "INFO",
+  "message": "GET /favicon.ico 404 178 bytes — 1.454 ms",
+  "timestamp": "2026-03-10T04:05:40.300Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "INFO",
+  "message": "GET /api/ 200 31 bytes — 0.580 ms",
+  "timestamp": "2026-03-10T04:06:12.196Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGINT received — shutting down gracefully",
+  "timestamp": "2026-03-10T04:08:23.212Z",
+  "meta": {}
+}

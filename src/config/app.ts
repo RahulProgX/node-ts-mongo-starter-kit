@@ -9,6 +9,7 @@ import globalRateLimiter from "./rateLimiter.config.js";
 import { notFoundHandler } from "@interfaces/http/middlewares/notFoundHandler.middleware.js";
 import { globalErrorHandler } from "@interfaces/http/middlewares/globalErrorHandler.middleware.js";
 import router from "../interfaces/http/routes/index.js";
+import requestLogger from "@interfaces/http/middlewares/requestLogger.middleware.js";
 
 const createApp = (): Express => {
   const app = express();
@@ -29,6 +30,9 @@ const createApp = (): Express => {
    *  3rd — blocks abusive IPs before hitting app logic
    */
   app.use(globalRateLimiter);
+
+  // HTTP request logging
+  app.use(requestLogger);
 
   // CORS
   /**
