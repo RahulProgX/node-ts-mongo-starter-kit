@@ -3,16 +3,20 @@ import type { Express, NextFunction, Request, Response } from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import envConfig from "./env.config.js";
+import helmet from "helmet";
 import { globalErrorHandler } from "../interfaces/middlewares/globalErrorHandler.js";
 import { HTTPSTATUS } from "./http.config.js";
 import { asyncHandler } from "../interfaces/middlewares/asyncHandler.js";
 import { AppError } from "../common/errors/AppError.js";
 import { notFoundHandler } from "../interfaces/middlewares/notFoundHandler.js";
+import globalRateLimiter from "./rateLimiter.config.js";
 
 const createApp = (): Express => {
   const app = express();
 
   // Core Middleware
+  app.use(globalRateLimiter);
+  app.use(helmet());
   app.use(
     cors({
       origin: envConfig.APP_ORIGIN,
