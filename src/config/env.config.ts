@@ -18,7 +18,8 @@ export const validateEnvironmentVariables = (): void => {
     .map(([key]) => key);
 
   for (const variable of missing) {
-    console.warn(APP_LOG_MESSAGE.MISSING_ENV_VARIABLE, { variable } );
+    // eslint-disable-next-line no-console
+    console.warn(APP_LOG_MESSAGE.MISSING_ENV_VARIABLE, { variable });
   }
 };
 

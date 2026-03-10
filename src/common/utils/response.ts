@@ -1,19 +1,17 @@
 import type { Request } from "express";
 import type { ErrorCode } from "../enums/errorCode.enum.js";
-import { HTTPSTATUS, type THttpStatusCode } from "../../config/http.config.js";
-
 
 export type TError = { field?: string; message: string };
 
 export interface TApiResponse<T = unknown> {
   success: boolean;
   message: string;
-  errorCode?:ErrorCode | undefined;
+  errorCode?: ErrorCode | undefined;
   data?: T | undefined;
   errors?: TError[] | undefined;
   meta?: {
     timestamp: string;
-    path?: string |  undefined;
+    path?: string | undefined;
     method?: string | undefined;
     [key: string]: unknown;
   };
@@ -24,7 +22,7 @@ export interface TApiResponse<T = unknown> {
 export function successResponse<T>(
   data: T,
   message = "Success",
-  meta?: TApiResponse<T>["meta"]
+  meta?: TApiResponse<T>["meta"],
 ): TApiResponse<T> {
   return {
     success: true,
@@ -38,7 +36,7 @@ export function errorResponse(
   message = "Something went wrong.",
   errorCode?: ErrorCode,
   errors?: TError[],
-  req?: Request
+  req?: Request,
 ): TApiResponse<null> {
   return {
     success: false,
@@ -52,4 +50,3 @@ export function errorResponse(
     },
   };
 }
-

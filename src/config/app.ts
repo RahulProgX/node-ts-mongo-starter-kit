@@ -25,19 +25,22 @@ const createApp = (): Express => {
   app.use(express.urlencoded({ extended: true }));
 
   // Health check
-  app.get("/",asyncHandler( async (_req: Request, res: Response, next:NextFunction) => {
-    res.status(HTTPSTATUS.OK).json({
-      success:true,
-      message: "OK",
-    })
-  }));
+  app.get(
+    "/",
+    asyncHandler(async (_req: Request, res: Response, _next: NextFunction) => {
+      res.status(HTTPSTATUS.OK).json({
+        success: true,
+        message: "OK",
+      });
+    }),
+  );
 
   // Error handled test
   app.get(
     "/error-test",
     asyncHandler(async () => {
       throw new AppError("Test error", HTTPSTATUS.BAD_REQUEST);
-    })
+    }),
   );
 
   // app.use("/api/v1", router);
