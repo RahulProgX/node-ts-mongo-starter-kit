@@ -6,21 +6,19 @@ import { fileURLToPath } from "url";
 
 import envConfig from "../../config/env.config.js";
 import { ENVIRONMENTS } from "../../common/constants/index.js";
+import MongoTransport from "./mongoTransport.js";
 
 const { combine, timestamp, printf } = format;
 
-//   Fix __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Console Log Format
 const consoleFormat = printf(({ level, message, timestamp, meta = {} }) => {
   return `${level.toUpperCase()} [${timestamp}] ${message}
 META ${util.inspect(meta, { depth: null, colors: true })}
 `;
 });
 
-//   File Log Format (JSON)
 const fileFormat = printf(({ level, message, timestamp, meta = {} }) => {
   const parsedMeta: Record<string, unknown> = {};
 
@@ -48,12 +46,15 @@ const fileFormat = printf(({ level, message, timestamp, meta = {} }) => {
   );
 });
 
-// Transport Config
 const loggerTransports: Transport[] = [
   new transports.File({
     filename: path.resolve(__dirname, "../../../logs/application.log"),
     level: "info",
     format: combine(timestamp(), fileFormat),
+  }),
+
+  new MongoTransport({
+    level: "info", // captures info, warn, error (Winston severity ladder)
   }),
 ];
 
@@ -66,7 +67,6 @@ if (envConfig.NODE_ENV === ENVIRONMENTS.DEVELOPMENT) {
   );
 }
 
-// Logger Instance
 const logger = createLogger({
   level: "info",
   defaultMeta: { meta: {} },
