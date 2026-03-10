@@ -1,0 +1,23 @@
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-09T23:46:02.533Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-09T23:46:02.551Z",
+  "meta": {
+    "host": "localhost"
+  }
+}
+{
+  "level": "INFO",
+  "message": "\nSIGINT received — shutting down gracefully",
+  "timestamp": "2026-03-09T23:46:08.965Z",
+  "meta": {}
+}
