@@ -4,7 +4,7 @@ export const HTTPSTATUS = {
   CREATED: 201,
   ACCEPTED: 202,
   NO_CONTENT: 204,
-  
+
   // Client error responses
   BAD_REQUEST: 400,
   UNAUTHORIZED: 401,
@@ -22,6 +22,5 @@ export const HTTPSTATUS = {
   SERVICE_UNAVAILABLE: 503,
   GATEWAY_TIMEOUT: 504,
 } as const;
-
 
 export type THttpStatusCode = (typeof HTTPSTATUS)[keyof typeof HTTPSTATUS];

@@ -1,7 +1,10 @@
 import type { NextFunction, Request, RequestHandler, Response } from "express";
 
-type  TAsyncController = (req:Request, res:Response, next:NextFunction)=> Promise<unknown>;
-
+type TAsyncController = (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => Promise<unknown>;
 
 export const asyncHandler =
   (controller: TAsyncController): RequestHandler =>
