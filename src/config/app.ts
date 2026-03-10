@@ -10,6 +10,7 @@ import { HTTPSTATUS } from "./http.config.js";
 import { AppError } from "@common/errors/AppError.js";
 import { notFoundHandler } from "@interfaces/http/middlewares/notFoundHandler.middleware.js";
 import { globalErrorHandler } from "@interfaces/http/middlewares/globalErrorHandler.middleware.js";
+import router from "../interfaces/http/routes/index.js";
 
 const createApp = (): Express => {
   const app = express();
@@ -28,26 +29,8 @@ const createApp = (): Express => {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
-  // Health check
-  app.get(
-    "/",
-    asyncHandler(async (_req: Request, res: Response, _next: NextFunction) => {
-      res.status(HTTPSTATUS.OK).json({
-        success: true,
-        message: "OK",
-      });
-    }),
-  );
-
-  // Error handled test
-  app.get(
-    "/error-test",
-    asyncHandler(async () => {
-      throw new AppError("Test error", HTTPSTATUS.BAD_REQUEST);
-    }),
-  );
-
-  // app.use("/api/v1", router);
+  // routes
+  app.use("/api", router);
 
   /// Catch-all for unmatched routes
   app.use(notFoundHandler);
