@@ -1,4 +1,4 @@
-import { NotFoundException } from "@common/utils/errorException.js";
+import { NotFoundException } from "@common/errors/errorException.js";
 import type { NextFunction, Request, Response } from "express";
 
 /**

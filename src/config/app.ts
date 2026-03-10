@@ -5,11 +5,11 @@ import cookieParser from "cookie-parser";
 import helmet from "helmet";
 import envConfig from "./env.config.js";
 import globalRateLimiter from "./rateLimiter.config.js";
-import { asyncHandler } from "@interfaces/middlewares/asyncHandler.js";
+import { asyncHandler } from "@common/utils/asyncHandler.js";
 import { HTTPSTATUS } from "./http.config.js";
 import { AppError } from "@common/errors/AppError.js";
-import { notFoundHandler } from "@interfaces/middlewares/notFoundHandler.js";
-import { globalErrorHandler } from "@interfaces/middlewares/globalErrorHandler.js";
+import { notFoundHandler } from "@interfaces/http/middlewares/notFoundHandler.middleware.js";
+import { globalErrorHandler } from "@interfaces/http/middlewares/globalErrorHandler.middleware.js";
 
 const createApp = (): Express => {
   const app = express();
