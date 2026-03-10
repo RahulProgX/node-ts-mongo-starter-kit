@@ -9,7 +9,9 @@
     "build": "tsc && cp ./package.json ./dist",
     "start": "node dist/index.js",
     "prepare": "husky install",
-    "commit": "cz"
+    "commit": "cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog:first": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "lint-staged": {
     "*.js": [
@@ -60,6 +62,7 @@
     "@types/qrcode": "^1.5.6",
     "@types/speakeasy": "^2.0.10",
     "commitizen": "^4.3.1",
+    "conventional-changelog-cli": "^5.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^10.0.3",
     "husky": "^9.1.7",
