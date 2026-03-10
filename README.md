@@ -350,10 +350,10 @@ Enforced via `commitlint` + Husky on `commit-msg` hook.
 | Error handling middleware          | ✅     |
 | 404 not found middleware           | ✅     |
 | Health check endpoint              | ✅     |
+| Security hardening (helmet, hpp)   | ✅     |
 | HTTP request logging (morgan)      | 🔲     |
 | Auth module (JWT register/login)   | 🔲     |
 | Input validation (Zod)             | 🔲     |
-| Security hardening (helmet, hpp)   | 🔲     |
 
 ---
 
