@@ -58,7 +58,7 @@ const createApp = (): Express => {
   app.use(express.urlencoded({ extended: true }));
 
   // --- ROUTES
-  app.use("/api", router);
+  app.use("/api/v1", router);
 
   // --- CATCH ALL UNMATCHED ROUTES
   app.use(notFoundHandler);

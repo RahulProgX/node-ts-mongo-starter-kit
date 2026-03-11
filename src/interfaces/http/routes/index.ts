@@ -1,8 +1,10 @@
 import { Router, type IRouter } from "express";
 import healthRoutes from "@modules/health/health.routes.js";
+import authRoutes from "@modules/auth/auth.routes.js";
 
-const router: IRouter = Router();
+const routes: IRouter = Router();
 
-router.use("", healthRoutes);
+routes.use("/auth", authRoutes);
+routes.use("", healthRoutes);
 
-export default router;
+export default routes;

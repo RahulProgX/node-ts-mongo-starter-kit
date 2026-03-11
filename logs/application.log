@@ -138,3 +138,26 @@
   "timestamp": "2026-03-10T04:08:23.212Z",
   "meta": {}
 }
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T06:52:59.267Z",
+  "meta": {
+    "host": "localhost"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T06:52:59.282Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGINT received — shutting down gracefully",
+  "timestamp": "2026-03-11T06:53:49.916Z",
+  "meta": {}
+}
