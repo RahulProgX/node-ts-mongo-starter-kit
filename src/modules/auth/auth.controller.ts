@@ -1,8 +1,9 @@
-import { asyncHandler } from "@common/utils/asyncHandler.js";
-import type { AuthService } from "./auth.service.js";
-import type { Request, RequestHandler, Response } from "express";
-import { HTTPSTATUS } from "@config/http.config.js";
-import { successResponse } from "@common/utils/response.js";
+import { asyncHandler } from '@common/utils/asyncHandler.js';
+import type { AuthService } from './auth.service.js';
+import type { Request, RequestHandler, Response } from 'express';
+import { HTTPSTATUS } from '@config/http.config.js';
+import { successResponse } from '@common/utils/response.js';
+import { RegisterSchema } from './auth.validation.js';
 
 export class AuthController {
   private authService: AuthService;
@@ -13,9 +14,11 @@ export class AuthController {
 
   public register: RequestHandler = asyncHandler(
     async (req: Request, res: Response): Promise<unknown> => {
+      const userPayload = RegisterSchema.parse({ ...req.body });
+      const { user } = await this.authService.register(userPayload);
       return res
         .status(HTTPSTATUS.CREATED)
-        .json(successResponse({}, "User registered successfully"));
+        .json(successResponse(user, 'User registered successfully'));
     },
   );
 }

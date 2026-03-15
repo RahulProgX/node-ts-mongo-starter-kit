@@ -161,3 +161,603 @@
   "timestamp": "2026-03-11T06:53:49.916Z",
   "meta": {}
 }
+{
+  "level": "WARN",
+  "message": "❌ DB CONNECTION ERROR",
+  "timestamp": "2026-03-11T14:26:10.677Z",
+  "meta": {
+    "error": {
+      "name": "MongooseServerSelectionError",
+      "message": "Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/",
+      "stack": "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\n    at _handleConnectionErrors (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/mongoose@9.2.4/node_modules/mongoose/lib/connection.js:1169:11)\n    at NativeConnection.openUri (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/mongoose@9.2.4/node_modules/mongoose/lib/connection.js:1100:11)\n    at async connect (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/infrastructure/database/connectDatabase.ts:8:28)\n    at async connectDatabase (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/infrastructure/database/connectDatabase.ts:19:3)\n    at async bootstrap (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/index.ts:15:5)"
+    }
+  }
+}
+{
+  "level": "WARN",
+  "message": "❌ DB CONNECTION ERROR",
+  "timestamp": "2026-03-11T14:27:16.844Z",
+  "meta": {
+    "error": {
+      "name": "MongooseServerSelectionError",
+      "message": "Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/",
+      "stack": "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\n    at _handleConnectionErrors (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/mongoose@9.2.4/node_modules/mongoose/lib/connection.js:1169:11)\n    at NativeConnection.openUri (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/mongoose@9.2.4/node_modules/mongoose/lib/connection.js:1100:11)\n    at async connect (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/infrastructure/database/connectDatabase.ts:8:28)\n    at async connectDatabase (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/infrastructure/database/connectDatabase.ts:19:3)\n    at async bootstrap (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/index.ts:15:5)"
+    }
+  }
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:31:48.084Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-00.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:31:48.183Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "GET /api/v1 200 31 bytes — 5.691 ms",
+  "timestamp": "2026-03-11T14:32:16.044Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "ERROR",
+  "message": "❌ APPLICATION ERROR",
+  "timestamp": "2026-03-11T14:34:05.615Z",
+  "meta": {
+    "error": {
+      "name": "NotFoundException",
+      "message": "Route '/api/v1/auth' not found",
+      "stack": "NotFoundException: Route '/api/v1/auth' not found\n    at notFoundHandler (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/interfaces/http/middlewares/notFoundHandler.middleware.ts:13:8)\n    at Layer.handleRequest (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:342:13)\n    at /home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:297:9\n    at processParams (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:582:12)\n    at Immediate.next (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:291:5)\n    at Immediate._onImmediate (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:688:15)\n    at process.processImmediate (node:internal/timers:506:21)"
+    }
+  }
+}
+{
+  "level": "INFO",
+  "message": "POST /api/v1/auth 404 179 bytes — 19.717 ms",
+  "timestamp": "2026-03-11T14:34:05.619Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "ERROR",
+  "message": "❌ APPLICATION ERROR",
+  "timestamp": "2026-03-11T14:34:05.640Z",
+  "meta": {
+    "error": {
+      "name": "NotFoundException",
+      "message": "Route '/api/v1/auth' not found",
+      "stack": "NotFoundException: Route '/api/v1/auth' not found\n    at notFoundHandler (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/interfaces/http/middlewares/notFoundHandler.middleware.ts:13:8)\n    at Layer.handleRequest (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:342:13)\n    at /home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:297:9\n    at processParams (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:582:12)\n    at Immediate.next (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:291:5)\n    at Immediate._onImmediate (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:688:15)\n    at process.processImmediate (node:internal/timers:506:21)"
+    }
+  }
+}
+{
+  "level": "INFO",
+  "message": "POST /api/v1/auth 404 179 bytes — 3.095 ms",
+  "timestamp": "2026-03-11T14:34:05.642Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "ERROR",
+  "message": "❌ APPLICATION ERROR",
+  "timestamp": "2026-03-11T14:34:16.210Z",
+  "meta": {
+    "error": {
+      "name": "NotFoundException",
+      "message": "Route '/api/v1/auth' not found",
+      "stack": "NotFoundException: Route '/api/v1/auth' not found\n    at notFoundHandler (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/interfaces/http/middlewares/notFoundHandler.middleware.ts:13:8)\n    at Layer.handleRequest (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:342:13)\n    at /home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:297:9\n    at processParams (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:582:12)\n    at Immediate.next (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:291:5)\n    at Immediate._onImmediate (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:688:15)\n    at process.processImmediate (node:internal/timers:506:21)"
+    }
+  }
+}
+{
+  "level": "INFO",
+  "message": "POST /api/v1/auth 404 179 bytes — 1.754 ms",
+  "timestamp": "2026-03-11T14:34:16.212Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "INFO",
+  "message": "POST /api/v1/auth/register 201 67 bytes — 0.990 ms",
+  "timestamp": "2026-03-11T14:35:05.753Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:35:23.081Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:35:26.938Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-00.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:35:27.034Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "POST /api/v1/auth/register 201 81 bytes — 18.478 ms",
+  "timestamp": "2026-03-11T14:35:30.460Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:36:34.697Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:36:49.745Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-00.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:36:49.855Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:36:53.526Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:36:57.441Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-02.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:36:57.537Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:48:31.994Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:48:39.854Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-02.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:48:39.941Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:48:54.859Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:48:59.622Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-00.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:48:59.719Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:49:17.342Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:49:21.738Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-00.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:49:21.835Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:49:38.734Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:49:43.699Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-00.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:49:43.780Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:49:50.006Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:49:53.735Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-01.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:49:53.834Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:51:22.453Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:51:27.492Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-00.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:51:27.583Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:51:46.466Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:51:50.345Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-01.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:51:50.436Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:51:56.852Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:52:01.074Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-00.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:52:01.167Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:52:18.789Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:52:23.404Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-01.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:52:23.492Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:52:34.917Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:52:39.986Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-00.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:52:40.080Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:53:29.004Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:53:38.139Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-02.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:53:38.218Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:53:38.996Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-11T14:53:55.797Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-01.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-11T14:53:55.902Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-11T14:54:06.455Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-15T07:57:32.347Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-00.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-15T07:57:32.377Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "INFO",
+  "message": "GET /api/v1 200 31 bytes — 3.486 ms",
+  "timestamp": "2026-03-15T07:57:44.617Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "ERROR",
+  "message": "❌ APPLICATION ERROR",
+  "timestamp": "2026-03-15T07:57:56.153Z",
+  "meta": {
+    "error": {
+      "name": "ZodError",
+      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"email\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"password\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  }\n]",
+      "stack": "ZodError: [\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"email\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"password\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  }\n]\n    at <anonymous> (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/modules/auth/auth.controller.ts:17:42)\n    at <anonymous> (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/common/utils/asyncHandler.ts:12:21)\n    at Layer.handleRequest (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at next (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/route.js:117:3)\n    at handle (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at /home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:295:15\n    at processParams (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:582:12)\n    at next (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:291:5)"
+    }
+  }
+}
+{
+  "level": "INFO",
+  "message": "POST /api/v1/auth/register 400 349 bytes — 30.854 ms",
+  "timestamp": "2026-03-15T07:57:56.158Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "ERROR",
+  "message": "❌ APPLICATION ERROR",
+  "timestamp": "2026-03-15T07:58:38.251Z",
+  "meta": {
+    "error": {
+      "name": "ZodError",
+      "message": "[\n  {\n    \"origin\": \"string\",\n    \"code\": \"invalid_format\",\n    \"format\": \"regex\",\n    \"pattern\": \"/[A-Z]/\",\n    \"path\": [\n      \"password\"\n    ],\n    \"message\": \"Must contain uppercase\"\n  },\n  {\n    \"origin\": \"string\",\n    \"code\": \"invalid_format\",\n    \"format\": \"regex\",\n    \"pattern\": \"/[^A-Za-z0-9]/\",\n    \"path\": [\n      \"password\"\n    ],\n    \"message\": \"Must contain special character\"\n  }\n]",
+      "stack": "ZodError: [\n  {\n    \"origin\": \"string\",\n    \"code\": \"invalid_format\",\n    \"format\": \"regex\",\n    \"pattern\": \"/[A-Z]/\",\n    \"path\": [\n      \"password\"\n    ],\n    \"message\": \"Must contain uppercase\"\n  },\n  {\n    \"origin\": \"string\",\n    \"code\": \"invalid_format\",\n    \"format\": \"regex\",\n    \"pattern\": \"/[^A-Za-z0-9]/\",\n    \"path\": [\n      \"password\"\n    ],\n    \"message\": \"Must contain special character\"\n  }\n]\n    at <anonymous> (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/modules/auth/auth.controller.ts:17:42)\n    at <anonymous> (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/common/utils/asyncHandler.ts:12:21)\n    at Layer.handleRequest (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at next (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/route.js:117:3)\n    at handle (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/lib/layer.js:152:17)\n    at /home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:295:15\n    at processParams (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:582:12)\n    at next (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/node_modules/.pnpm/router@2.2.0/node_modules/router/index.js:291:5)"
+    }
+  }
+}
+{
+  "level": "INFO",
+  "message": "POST /api/v1/auth/register 400 304 bytes — 4.295 ms",
+  "timestamp": "2026-03-15T07:58:38.253Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "INFO",
+  "message": "POST /api/v1/auth/register 201 346 bytes — 771.667 ms",
+  "timestamp": "2026-03-15T07:58:54.113Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "INFO",
+  "message": "SIGTERM received — shutting down gracefully",
+  "timestamp": "2026-03-15T07:59:43.363Z",
+  "meta": {}
+}
+{
+  "level": "INFO",
+  "message": "✅ DATABASE CONNECTED",
+  "timestamp": "2026-03-15T07:59:47.614Z",
+  "meta": {
+    "host": "ac-bphlcgl-shard-00-00.dpvljwx.mongodb.net"
+  }
+}
+{
+  "level": "INFO",
+  "message": "🚀 APPLICATION STARTED",
+  "timestamp": "2026-03-15T07:59:47.648Z",
+  "meta": {
+    "PORT": "8000",
+    "ENV": "development"
+  }
+}
+{
+  "level": "ERROR",
+  "message": "❌ APPLICATION ERROR",
+  "timestamp": "2026-03-15T07:59:58.469Z",
+  "meta": {
+    "error": {
+      "name": "BadRequestException",
+      "message": "User already exists",
+      "stack": "BadRequestException: User already exists\n    at AuthService.register (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/modules/auth/auth.service.ts:15:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async <anonymous> (/home/rahul/Documents/workspace/Starter kit/node-ts-mongo-starter-kit/src/modules/auth/auth.controller.ts:18:24)"
+    }
+  }
+}
+{
+  "level": "INFO",
+  "message": "POST /api/v1/auth/register 400 184 bytes — 237.357 ms",
+  "timestamp": "2026-03-15T07:59:58.481Z",
+  "meta": {
+    "type": "http"
+  }
+}
+{
+  "level": "INFO",
+  "message": "POST /api/v1/auth/register 201 348 bytes — 625.053 ms",
+  "timestamp": "2026-03-15T08:00:06.921Z",
+  "meta": {
+    "type": "http"
+  }
+}
